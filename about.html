@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en" data-page="about">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AI use declaration, data provenance and limitations for the NV Atlas corpus project.">
+    <title>AI Use & Data Notes | NV Atlas</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/styles.css?v=3">
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NV Atlas home">
+        <span class="brand-mark" aria-hidden="true"><span>N</span><span>V</span></span>
+        <span class="brand-copy">
+          <strong>NV Atlas</strong>
+          <small data-i18n="brand.subtitle">Corpus explorer</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="nav.explore">Explore</a>
+        <a href="report.html" data-i18n="nav.report">Learning report</a>
+        <a href="codebook.html" data-i18n="nav.codebook">Codebook</a>
+        <a href="review.html" data-i18n="nav.review">Quality check</a>
+        <a class="active" href="about.html" data-i18n="nav.ai">AI use</a>
+      </nav>
+      <button class="language-switch" id="language-switch" type="button" aria-label="Switch language">
+        <span data-lang-label="en">EN</span>
+        <span class="switch-divider" aria-hidden="true">/</span>
+        <span data-lang-label="zh">繁</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="content-hero">
+        <div class="lang-block" data-lang="en">
+          <p class="eyebrow">Transparency</p>
+          <h1>What AI did, what it did not do.</h1>
+          <p class="hero-lede">
+            A short declaration of tools, prompts, errors and the parts of this
+            project that require human judgement.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="zh">
+          <p class="eyebrow">透明聲明</p>
+          <h1>AI 做了什麼，又沒有做什麼。</h1>
+          <p class="hero-lede">
+            簡短說明所用工具、提示詞、錯誤，以及仍須由人判斷的專題部分。
+          </p>
+        </div>
+      </section>
+
+      <div class="content-layout">
+        <aside class="report-toc">
+          <div class="lang-block" data-lang="en">
+            <strong>On this page</strong>
+            <nav aria-label="About page contents">
+              <a href="#ai-use">AI use declaration</a>
+              <a href="#division">Division of work</a>
+              <a href="#prompts">Example prompts</a>
+              <a href="#data-notes">Data notes</a>
+              <a href="#rights">Copyright and privacy</a>
+            </nav>
+          </div>
+          <div class="lang-block" data-lang="zh">
+            <strong>本頁內容</strong>
+            <nav aria-label="關於頁目錄">
+              <a href="#ai-use">AI 使用聲明</a>
+              <a href="#division">工作分工</a>
+              <a href="#prompts">提示詞示例</a>
+              <a href="#data-notes">資料說明</a>
+              <a href="#rights">版權與隱私</a>
+            </nav>
+          </div>
+        </aside>
+
+        <article class="prose">
+          <section id="ai-use">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">2026-11-05</p>
+              <h2>AI use declaration</h2>
+              <p>
+                Tools used: OpenAI Codex in the Codex desktop application, backed by a
+                GPT-5 model. The exact checkpoint was not disclosed by the environment.
+                Web research was limited to the supplied brief, the supplied CSV and the
+                public course example repository.
+              </p>
+              <p>
+                I asked AI to read the project brief, inspect the CSV, design the corpus
+                schema and site, write the HTML/CSS/JavaScript, generate reproducible data
+                metadata, draft the bilingual codebook/report and test the interactions.
+                AI also drafted the initial four-way semantic coding.
+              </p>
+              <p>
+                The student supplied the corpus and requirements. The student must still
+                confirm the original corpus source, personally verify 50 entries, review
+                the AI-assisted coding, and decide whether the analysis and bilingual
+                report accurately represent their work before submission.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">2026-11-05</p>
+              <h2>AI 使用聲明</h2>
+              <p>
+                使用工具：Codex 桌面應用程式中的 OpenAI Codex，背後使用 GPT-5 模型；
+                執行環境未披露確切模型檢查點。網路研究只用於核對提供的作業要求、提供之 CSV，
+                以及公開的課堂範例網站。
+              </p>
+              <p>
+                AI 協助閱讀專題要求、檢查 CSV、設計語料欄位與網站、撰寫
+                HTML/CSS/JavaScript、產生可重現的資料中介資訊、草擬雙語編碼簿與報告，並測試互動功能。
+                初步四類語意編碼也由 AI 草擬。
+              </p>
+              <p>
+                語料與作業要求由學生提供。提交前，學生仍須確認原始語料來源、親自核對五十筆資料、
+                檢視 AI 協助的分類，並判斷分析與雙語報告是否準確代表自己的成果。
+              </p>
+            </div>
+          </section>
+
+          <section id="division">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">Division of work</p>
+              <h2>Human and AI contributions</h2>
+              <div class="method-grid">
+                <div class="method-card">
+                  <strong>Student</strong>
+                  <p>Supplied the project brief and 500-row CSV; selects the final topic, verifies entries against the corpus, reviews categories, and owns the submitted interpretation.</p>
+                </div>
+                <div class="method-card">
+                  <strong>AI</strong>
+                  <p>Inspected requirements, transformed the CSV, coded the interface, drafted bilingual text, and generated reproducible analysis fields.</p>
+                </div>
+              </div>
+              <div class="callout warning">
+                <p>
+                  <strong>Not completed by AI:</strong> no row is falsely marked as
+                  human checked. The quality-check page records the student's own review
+                  locally and exports the result for a later data update.
+                </p>
+              </div>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">工作分工</p>
+              <h2>人與 AI 的貢獻</h2>
+              <div class="method-grid">
+                <div class="method-card">
+                  <strong>學生</strong>
+                  <p>提供專題要求及五百行 CSV；選定最後題目，對照原始語料核對資料、審核類別，並對提交的最終解釋負責。</p>
+                </div>
+                <div class="method-card">
+                  <strong>AI</strong>
+                  <p>檢查要求、轉換 CSV、撰寫介面、草擬雙語文字，並產生可重現的分析欄位。</p>
+                </div>
+              </div>
+              <div class="callout warning">
+                <p>
+                  <strong>AI 未代替完成：</strong> 網站沒有把任何資料假稱為人工核對。
+                  品質檢查頁只在使用者自己的瀏覽器中記錄審核結果，並可匯出供日後更新資料。
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="prompts">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">Prompt examples</p>
+              <h2>Two prompts that worked well</h2>
+              <div class="prompt-grid">
+                <div class="prompt-card">
+                  <strong>1. Start from the brief</strong>
+                  <p>"Read the attached project brief and implement it using the supplied NV Atlas CSV. Do not invent corpus entries."</p>
+                </div>
+                <div class="prompt-card">
+                  <strong>2. Specify the interaction contract</strong>
+                  <p>"Build a static bilingual explorer with network, treemap and heatmap views. Make every view respond to search and filters, link clicks to the table, and store the exact state in the URL."</p>
+                </div>
+              </div>
+              <h3>One thing AI got wrong</h3>
+              <p>
+                AI initially treated the CSV as a publication-ready corpus. Inspection
+                showed that it contained only five columns and no source, category or
+                human-check status. The build therefore generated analysis metadata,
+                exposed the provenance uncertainty, and left human verification at
+                <code>no</code> instead of filling in convenient but unsupported claims.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">提示詞示例</p>
+              <h2>兩個有效的提示詞</h2>
+              <div class="prompt-grid">
+                <div class="prompt-card">
+                  <strong>一、從要求開始</strong>
+                  <p>「閱讀附件的專題要求，並用提供的 NV Atlas CSV 實作。不要虛構語料。」</p>
+                </div>
+                <div class="prompt-card">
+                  <strong>二、明確規定互動</strong>
+                  <p>「建立靜態雙語探索器，包含網絡、樹狀圖與熱圖。所有檢視須回應搜尋及篩選，點擊要連動資料表，並把完整狀態保存在網址。」</p>
+                </div>
+              </div>
+              <h3>AI 曾做錯的一件事</h3>
+              <p>
+                AI 起初把 CSV 視為可直接公開的完整語料。檢查後發現它只有五個欄位，
+                沒有來源、類別或人工核對狀態。因此建置流程產生分析中介資訊，
+                清楚揭露來源不確定性，並把人工核對保持為 <code>no</code>，
+                而沒有填入方便但缺乏證據的完成聲明。
+              </p>
+            </div>
+          </section>
+
+          <section id="data-notes">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">Source and limitations</p>
+              <h2>Data notes</h2>
+              <div class="source-grid">
+                <div class="source-card">
+                  <strong>Supplied file</strong>
+                  <p><code>NVAtlas-AI-Agent.csv</code>, 500 rows, modified 2026-10-30.</p>
+                </div>
+                <div class="source-card">
+                  <strong>Reported corpus</strong>
+                  <p>OpenSubtitles 2024 en-zh_CN. This label matches the course example and sentence IDs, but needs confirmation against the original download.</p>
+                </div>
+                <div class="source-card">
+                  <strong>Preserved fields</strong>
+                  <p>English, Chinese, English nominal and Chinese verb. Eight repeated sentence pairs remain because they have different source IDs.</p>
+                </div>
+                <div class="source-card">
+                  <strong>Unverified fields</strong>
+                  <p>The sampling seed and collection date are not present in the supplied CSV. The OpenSubtitles link and the 2026-10-30 file date are metadata, not proof of the missing record.</p>
+                </div>
+              </div>
+              <p>
+                Corpus source link:
+                <a href="https://opus.nlpl.eu/OpenSubtitles/corpus/version/OpenSubtitles" target="_blank" rel="noopener">OpenSubtitles in OPUS</a>.
+                Sentence pairs in this project are short subtitle lines, not complete
+                episodes or scripts.
+              </p>
+              <p>
+                Reproduce the browser data with
+                <code>python3 scripts/build_corpus.py</code>. The script preserves source
+                fields, checks for 500 non-empty rows, applies the published category
+                map, calculates verb position and writes <code>data/corpus.json</code>.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">來源與限制</p>
+              <h2>資料說明</h2>
+              <div class="source-grid">
+                <div class="source-card">
+                  <strong>提供檔案</strong>
+                  <p><code>NVAtlas-AI-Agent.csv</code>，五百行，修改時間為 2026-10-30。</p>
+                </div>
+                <div class="source-card">
+                  <strong>標示語料</strong>
+                  <p>OpenSubtitles 2024 en-zh_CN。此標示符合課堂範例與句編號格式，但仍須對照原始下載確認。</p>
+                </div>
+                <div class="source-card">
+                  <strong>保留欄位</strong>
+                  <p>英文、中文、英文名詞與中文動詞。八組重複句對因原始句編號不同而保留。</p>
+                </div>
+                <div class="source-card">
+                  <strong>未核實欄位</strong>
+                  <p>提供 CSV 沒有抽樣種子與收集日期。OpenSubtitles 連結及 2026-10-30 檔案日期只是中介資訊，不能當作缺失紀錄的證明。</p>
+                </div>
+              </div>
+              <p>
+                語料來源連結：
+                <a href="https://opus.nlpl.eu/OpenSubtitles/corpus/version/OpenSubtitles" target="_blank" rel="noopener">OPUS 中的 OpenSubtitles</a>。
+                本站只使用短字幕句對，不使用整部劇集或完整劇本。
+              </p>
+              <p>
+                可用 <code>python3 scripts/build_corpus.py</code> 重現瀏覽器資料。
+                腳本會保留原文欄位、檢查五百行皆非空、套用公開類別對照、計算動詞位置，
+                並輸出 <code>data/corpus.json</code>。
+              </p>
+            </div>
+          </section>
+
+          <section id="rights">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">Public site</p>
+              <h2>Copyright, privacy and sensitive language</h2>
+              <p>
+                The site contains short excerpts from subtitle sentence pairs for
+                coursework and corpus analysis. It does not reproduce whole works.
+                Source and sentence IDs are retained. Before final publication, confirm
+                that the original corpus licence permits this use and link to its terms.
+              </p>
+              <p>
+                The supplied rows appear to be film dialogue rather than personal data.
+                No phone number, address or private account information is deliberately
+                added. Some subtitle dialogue contains profanity or mature themes; the
+                explorer carries a visible content warning.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">公開網站</p>
+              <h2>版權、隱私與敏感語言</h2>
+              <p>
+                網站為課堂及語料分析使用而展示短字幕句對，不重製完整作品，並保留來源與句編號。
+                最終公開前，應確認原始語料授權允許此用途，並連結相關條款。
+              </p>
+              <p>
+                提供資料看來是影視對話，而非個人資料。本專案沒有刻意加入電話、地址或私人帳戶資料。
+                部分字幕含有粗俗語言或成人主題，因此探索器設有明顯內容提示。
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>NV Atlas</strong> · <span data-i18n="footer.project">Translation Technology final project</span></p>
+      <p data-i18n="footer.note">A static, open corpus explorer with no tracking.</p>
+    </footer>
+    <script src="assets/app.js?v=3" defer></script>
+  </body>
+</html>

@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en" data-page="codebook">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Codebook for the NV Atlas nominal-to-verb subtitle corpus.">
+    <title>Codebook | NV Atlas</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/styles.css?v=3">
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NV Atlas home">
+        <span class="brand-mark" aria-hidden="true"><span>N</span><span>V</span></span>
+        <span class="brand-copy">
+          <strong>NV Atlas</strong>
+          <small data-i18n="brand.subtitle">Corpus explorer</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="nav.explore">Explore</a>
+        <a href="report.html" data-i18n="nav.report">Learning report</a>
+        <a class="active" href="codebook.html" data-i18n="nav.codebook">Codebook</a>
+        <a href="review.html" data-i18n="nav.review">Quality check</a>
+        <a href="about.html" data-i18n="nav.ai">AI use</a>
+      </nav>
+      <button class="language-switch" id="language-switch" type="button" aria-label="Switch language">
+        <span data-lang-label="en">EN</span>
+        <span class="switch-divider" aria-hidden="true">/</span>
+        <span data-lang-label="zh">繁</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="content-hero">
+        <div class="lang-block" data-lang="en">
+          <p class="eyebrow">Coding scheme · version 2</p>
+          <h1>Four ways to name what a nominal does.</h1>
+          <p class="hero-lede">
+            The categories describe the core meaning of the English nominal in its
+            sentence pair. They do not describe the quality of the translation.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="zh">
+          <p class="eyebrow">編碼方案 · 第二版</p>
+          <h1>四種理解名詞功能的方式。</h1>
+          <p class="hero-lede">
+            類別描述英文名詞在該句對中的核心意義，而不是評價翻譯品質。
+          </p>
+        </div>
+      </section>
+
+      <div class="content-layout">
+        <aside class="report-toc">
+          <div class="lang-block" data-lang="en">
+            <strong>Category index</strong>
+            <nav aria-label="Codebook contents">
+              <a href="#communication">Speech & thought</a>
+              <a href="#control">Law & control</a>
+              <a href="#affect">Emotion & state</a>
+              <a href="#process">Action & change</a>
+              <a href="#position">Verb-position field</a>
+              <a href="#log">Coding log</a>
+            </nav>
+          </div>
+          <div class="lang-block" data-lang="zh">
+            <strong>類別目錄</strong>
+            <nav aria-label="編碼簿目錄">
+              <a href="#communication">言語與思考</a>
+              <a href="#control">法律與控制</a>
+              <a href="#affect">情緒與狀態</a>
+              <a href="#process">行動與變化</a>
+              <a href="#position">動詞位置欄位</a>
+              <a href="#log">編碼紀錄</a>
+            </nav>
+          </div>
+        </aside>
+
+        <article class="prose">
+          <section id="communication">
+            <div class="lang-block" data-lang="en">
+              <span class="category-index">01 · Communication</span>
+              <h2>Speech & thought</h2>
+              <p>
+                An utterance, communicative act, representation, or act of thinking
+                is central to the English nominal. Typical terms include
+                <em>question</em>, <em>explanation</em>, <em>discussion</em> and
+                <em>description</em>.
+              </p>
+              <dl>
+                <dt>Theory source</dt>
+                <dd>Halliday and Martin's grammatical metaphor: a process may be packaged as an entity.</dd>
+                <dt>Decision rule</dt>
+                <dd>Choose this category when the nominal names saying, asking, telling, representing or thinking. Ignore the Chinese verb's grammar when deciding the semantic category.</dd>
+                <dt>Positive example</dt>
+                <dd>ID 168: <em>question</em> → <em>问</em> in "I was gonna ask you the same question." The nominal names a communicative act.</dd>
+                <dt>Negative example</dt>
+                <dd>ID 474: <em>obsession</em> → <em>痴迷</em> is an affective state, not an utterance or explicit thought act.</dd>
+                <dt>Boundary case</dt>
+                <dd><em>Argument</em> can mean a disagreement or a reason. The supplied entries describe disputes, so they remain under communication; a future logical-argument sense would need review.</dd>
+              </dl>
+              <p><a href="index.html?category=communication&amp;sort=id&amp;dir=asc">Open this category in the explorer</a></p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <span class="category-index">01 · 言語</span>
+              <h2>言語與思考</h2>
+              <p>
+                英文名詞的核心是話語、溝通行為、再現方式或思考行為。典型詞包括
+                <em>question</em>、<em>explanation</em>、<em>discussion</em> 與
+                <em>description</em>。
+              </p>
+              <dl>
+                <dt>理論來源</dt>
+                <dd>Halliday 與 Martin 的語法隱喻：過程可以被包裝為實體。</dd>
+                <dt>判定規則</dt>
+                <dd>名詞命名說、問、告知、再現或思考時歸入此類。判斷時看名詞核心意義，不以中文動詞的語法外形決定。</dd>
+                <dt>正向例子</dt>
+                <dd>編號 168：<em>question</em> → <em>问</em>，對應 "I was gonna ask you the same question."；名詞指向溝通行為。</dd>
+                <dt>反向例子</dt>
+                <dd>編號 474：<em>obsession</em> → <em>痴迷</em> 是情感狀態，不是話語或明確思考行為。</dd>
+                <dt>邊界案例</dt>
+                <dd><em>Argument</em> 可指爭論，也可指理由。提供資料中的例子描述爭執，因此暫歸言語；若日後出現邏輯論證義，須重新審核。</dd>
+              </dl>
+              <p><a href="index.html?lang=zh&amp;category=communication&amp;sort=id&amp;dir=asc">在探索器中開啟此類別</a></p>
+            </div>
+          </section>
+
+          <section id="control">
+            <div class="lang-block" data-lang="en">
+              <span class="category-index">02 · Control</span>
+              <h2>Law & control</h2>
+              <p>
+                The nominal concerns permission, obligation, institutional judgement,
+                legal process, punishment, management or a binding social outcome.
+                Examples include <em>permission</em>, <em>decision</em>,
+                <em>offence</em> and <em>annulment</em>.
+              </p>
+              <dl>
+                <dt>Theory source</dt>
+                <dd>Vinay and Darbelnet's transposition, used with a semantic domain distinction rather than as a strict equivalence rule.</dd>
+                <dt>Decision rule</dt>
+                <dd>Choose this category when the core meaning depends on authority, rules, social consequence or a decision that constrains action.</dd>
+                <dt>Positive example</dt>
+                <dd>ID 5884: <em>permission</em> → <em>准许</em> in "With your permission... I'll pull a few eggs from under your nose." The nominal concerns authorisation.</dd>
+                <dt>Negative example</dt>
+                <dd>ID 2036: <em>dance</em> → <em>跳舞</em> is performed action rather than legal authority or permission.</dd>
+                <dt>Boundary case</dt>
+                <dd><em>Consideration</em> can mean thought, care or a legal exchange. Supplied uses occur in legal or transactional phrasing, so it is coded as law and control, not communication.</dd>
+              </dl>
+              <p><a href="index.html?category=control&amp;sort=id&amp;dir=asc">Open this category in the explorer</a></p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <span class="category-index">02 · 控制</span>
+              <h2>法律與控制</h2>
+              <p>
+                名詞涉及許可、義務、制度判斷、法律程序、懲罰、管理或具約束力的社會結果。
+                例子包括 <em>permission</em>、<em>decision</em>、<em>offence</em> 與 <em>annulment</em>。
+              </p>
+              <dl>
+                <dt>理論來源</dt>
+                <dd>Vinay 與 Darbelnet 的詞性轉換，配合語意領域區分，而非把它當成固定等值規則。</dd>
+                <dt>判定規則</dt>
+                <dd>名詞核心意義涉及權力、規則、社會後果，或限制行動的決定時歸入此類。</dd>
+                <dt>正向例子</dt>
+                <dd>編號 5884：<em>permission</em> → <em>准许</em>，句中意義是「取得准許」，與授權和行動條件有關。</dd>
+                <dt>反向例子</dt>
+                <dd>編號 2036：<em>dance</em> → <em>跳舞</em> 是實際演出動作，不是法律權限或准許。</dd>
+                <dt>邊界案例</dt>
+                <dd><em>Consideration</em> 可指思考、體諒或法律上的對價。提供資料的用法位於法律及交易語境，因此歸入法律與控制，而非言語與思考。</dd>
+              </dl>
+              <p><a href="index.html?lang=zh&amp;category=control&amp;sort=id&amp;dir=asc">在探索器中開啟此類別</a></p>
+            </div>
+          </section>
+
+          <section id="affect">
+            <div class="lang-block" data-lang="en">
+              <span class="category-index">03 · Affect</span>
+              <h2>Emotion & state</h2>
+              <p>
+                The nominal foregrounds a feeling, attention, inner state, desire,
+                perception or evaluation. Examples include <em>obsession</em>,
+                <em>attention</em>, <em>silence</em> and <em>intoxication</em>.
+              </p>
+              <dl>
+                <dt>Theory source</dt>
+                <dd>Grammatical metaphor and systemic-functional attention to affect and state as meanings that can be packaged nominally.</dd>
+                <dt>Decision rule</dt>
+                <dd>Choose this category when the nominal primarily names what a person feels, attends to, desires or experiences internally, rather than an outward event.</dd>
+                <dt>Positive example</dt>
+                <dd>ID 474: <em>obsession</em> → <em>痴迷</em> in "What is his obsession with you?" describes a strong affective fixation.</dd>
+                <dt>Negative example</dt>
+                <dd>ID 804: <em>destruction</em> → <em>烧毁</em> is an outward destructive event, not an inner state.</dd>
+                <dt>Boundary case</dt>
+                <dd><em>Attention</em> can mark a cognitive action, but the supplied lines mostly express focus or a command to attend. It is coded as a state of attention so that the common subtitle pattern remains visible.</dd>
+              </dl>
+              <p><a href="index.html?category=affect&amp;sort=id&amp;dir=asc">Open this category in the explorer</a></p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <span class="category-index">03 · 情感</span>
+              <h2>情緒與狀態</h2>
+              <p>
+                名詞把感受、注意、內在狀態、欲望、感知或評價放在前景。例子包括
+                <em>obsession</em>、<em>attention</em>、<em>silence</em> 與 <em>intoxication</em>。
+              </p>
+              <dl>
+                <dt>理論來源</dt>
+                <dd>語法隱喻，以及系統功能語言學對情感與狀態可被名詞化包裝的觀察。</dd>
+                <dt>判定規則</dt>
+                <dd>名詞主要命名個人的感受、注意、欲望或內在經驗，而非外在事件時歸入此類。</dd>
+                <dt>正向例子</dt>
+                <dd>編號 474：<em>obsession</em> → <em>痴迷</em>，描述強烈的情感執著。</dd>
+                <dt>反向例子</dt>
+                <dd>編號 804：<em>destruction</em> → <em>烧毁</em> 是外在破壞事件，不是內在狀態。</dd>
+                <dt>邊界案例</dt>
+                <dd><em>Attention</em> 也可視為認知行動；提供資料多表示專注或「注意」的指令，因此編為注意狀態，使字幕中的高頻模式保持可見。</dd>
+              </dl>
+              <p><a href="index.html?lang=zh&amp;category=affect&amp;sort=id&amp;dir=asc">在探索器中開啟此類別</a></p>
+            </div>
+          </section>
+
+          <section id="process">
+            <div class="lang-block" data-lang="en">
+              <span class="category-index">04 · Process</span>
+              <h2>Action & change</h2>
+              <p>
+                The nominal names an outward activity, event, transformation,
+                construction, movement or physical process. Examples include
+                <em>destruction</em>, <em>publication</em> and <em>dance</em>.
+              </p>
+              <dl>
+                <dt>Theory source</dt>
+                <dd>Grammatical metaphor, where a process is compressed into a noun and may be unpacked again in the target language.</dd>
+                <dt>Decision rule</dt>
+                <dd>Choose this category when no other domain is central and the nominal primarily names something happening, being done or changing.</dd>
+                <dt>Positive example</dt>
+                <dd>ID 804: <em>destruction</em> → <em>烧毁</em> names a physical destructive action.</dd>
+                <dt>Negative example</dt>
+                <dd>ID 5884: <em>permission</em> → <em>准许</em> concerns authorisation, even though it is also an act.</dd>
+                <dt>Boundary case</dt>
+                <dd><em>Administration</em> can be an activity, but in institutional usage it is treated as management and therefore coded as law and control.</dd>
+              </dl>
+              <p><a href="index.html?category=process&amp;sort=id&amp;dir=asc">Open this category in the explorer</a></p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <span class="category-index">04 · 過程</span>
+              <h2>行動與變化</h2>
+              <p>
+                名詞命名外在活動、事件、轉變、建造、移動或物理過程。例子包括
+                <em>destruction</em>、<em>publication</em> 與 <em>dance</em>。
+              </p>
+              <dl>
+                <dt>理論來源</dt>
+                <dd>語法隱喻：過程先被壓縮成名詞，再可能於目標語中展開為動作。</dd>
+                <dt>判定規則</dt>
+                <dd>若名詞不屬其他領域，且主要命名正在發生、被完成或正在改變的事情，歸入此類。</dd>
+                <dt>正向例子</dt>
+                <dd>編號 804：<em>destruction</em> → <em>烧毁</em> 命名具體的破壞行動。</dd>
+                <dt>反向例子</dt>
+                <dd>編號 5884：<em>permission</em> → <em>准许</em> 雖也是行為，核心意義卻是授權。</dd>
+                <dt>邊界案例</dt>
+                <dd><em>Administration</em> 可以是活動，但制度語境中主要指管理，因此歸入法律與控制。</dd>
+              </dl>
+              <p><a href="index.html?lang=zh&amp;category=process&amp;sort=id&amp;dir=asc">在探索器中開啟此類別</a></p>
+            </div>
+          </section>
+
+          <section id="position">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">Supporting field</p>
+              <h2>Verb position</h2>
+              <p>
+                This field is mechanical and separate from semantic coding. After removing
+                surrounding punctuation, the script locates the supplied Chinese verb.
+              </p>
+              <ul>
+                <li><strong>Verb-first:</strong> the verb is the first meaningful element.</li>
+                <li><strong>Modal or negative context:</strong> the four characters before the verb contain a marker such as 不, 沒, 別, 要, 會, 能 or 請.</li>
+                <li><strong>Embedded in predicate:</strong> the verb occurs later without one of those markers immediately before it.</li>
+              </ul>
+              <p>
+                This is a rule-based approximation. It does not parse syntax and should
+                not be read as a complete grammatical analysis.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">輔助欄位</p>
+              <h2>動詞位置</h2>
+              <p>
+                這個欄位機械化產生，與語意編碼分開。腳本先移除譯文兩端的標點，
+                再找出提供的中文動詞。
+              </p>
+              <ul>
+                <li><strong>動詞起首：</strong> 動詞是有意義的第一個成分。</li>
+                <li><strong>情態或否定語境：</strong> 動詞前四個字內含有不、沒、別、要、會、能、請等標記。</li>
+                <li><strong>嵌入謂語：</strong> 動詞出現在較後位置，前方沒有上述標記。</li>
+              </ul>
+              <p>
+                這是規則式近似，並非完整句法分析，讀者不應把它當作嚴格語法標註。
+              </p>
+            </div>
+          </section>
+
+          <section id="log">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">Revision record</p>
+              <h2>Codebook log</h2>
+              <ol class="codebook-log">
+                <li>
+                  <strong>Version 1:</strong> tested on an initial 24-row check set.
+                  A broad "thing versus action" split placed permission and question
+                  together and hid the main contrast between social control and speech.
+                </li>
+                <li>
+                  <strong>Revision 1:</strong> added separate domains for speech and
+                  thought, law and control, and affect. The 24-row set was recoded after
+                  writing the decision rules, not before.
+                </li>
+                <li>
+                  <strong>Version 2:</strong> added action and change as the residual
+                  field with an explicit negative example. Added the boundary rule that
+                  context, not the Chinese verb alone, determines a cross-domain nominal.
+                </li>
+                <li>
+                  <strong>Pending:</strong> the student's independent check of 50
+                  randomly selected rows must be completed and recorded before submission.
+                </li>
+              </ol>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">修訂紀錄</p>
+              <h2>編碼紀錄</h2>
+              <ol class="codebook-log">
+                <li>
+                  <strong>第一版：</strong> 以最初 24 行測試。粗略的「事物／行動」二分把
+                  permission 與 question 放在一起，掩蓋社會控制與言語行為的差異。
+                </li>
+                <li>
+                  <strong>第一次修訂：</strong> 先寫下判定規則，再把 24 行重新編碼，
+                  分出言語與思考、法律與控制、情感三個領域。
+                </li>
+                <li>
+                  <strong>第二版：</strong> 增設「行動與變化」作剩餘類別，加入明確的反向例子。
+                  並規定跨領域名詞依語境判斷，不能只由中文動詞決定。
+                </li>
+                <li>
+                  <strong>待完成：</strong> 提交前須由學生獨立核對五十筆隨機選樣並記錄結果。
+                </li>
+              </ol>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>NV Atlas</strong> · <span data-i18n="footer.project">Translation Technology final project</span></p>
+      <p data-i18n="footer.note">A static, open corpus explorer with no tracking.</p>
+    </footer>
+    <script src="assets/app.js?v=3" defer></script>
+  </body>
+</html>

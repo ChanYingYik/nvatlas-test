@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-page="review">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A seeded 50-entry quality-check workspace for the NV Atlas corpus.">
+    <title>Quality Check | NV Atlas</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/styles.css?v=3">
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NV Atlas home">
+        <span class="brand-mark" aria-hidden="true"><span>N</span><span>V</span></span>
+        <span class="brand-copy">
+          <strong>NV Atlas</strong>
+          <small data-i18n="brand.subtitle">Corpus explorer</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="nav.explore">Explore</a>
+        <a href="report.html" data-i18n="nav.report">Learning report</a>
+        <a href="codebook.html" data-i18n="nav.codebook">Codebook</a>
+        <a class="active" href="review.html" data-i18n="nav.review">Quality check</a>
+        <a href="about.html" data-i18n="nav.ai">AI use</a>
+      </nav>
+      <button class="language-switch" id="language-switch" type="button" aria-label="Switch language">
+        <span data-lang-label="en">EN</span>
+        <span class="switch-divider" aria-hidden="true">/</span>
+        <span data-lang-label="zh">繁</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="content-hero">
+        <div class="lang-block" data-lang="en">
+          <p class="eyebrow">Required human check</p>
+          <h1>Review 50 seeded entries.</h1>
+          <p class="hero-lede">
+            Compare each pair with the original corpus, mark what is correct or needs
+            correction, and export the result before updating the published data.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="zh">
+          <p class="eyebrow">必須的人工檢查</p>
+          <h1>核對五十筆固定樣本。</h1>
+          <p class="hero-lede">
+            對照原始語料，標記正確或需要修正的句對，並在更新公開資料前匯出結果。
+          </p>
+        </div>
+      </section>
+
+      <div class="content-layout">
+        <aside class="report-toc">
+          <div class="lang-block" data-lang="en">
+            <strong>How this sample works</strong>
+            <p>
+              A seeded shuffle of all 500 rows selects the same 50 entries every time.
+              The seed is <code>2026</code>. Status is saved only in this browser.
+            </p>
+            <p>
+              Verify text and alignment against the original OpenSubtitles download.
+              A rough translation is not necessarily an alignment error.
+            </p>
+            <a href="about.html#data-notes">Read the provenance notes</a>
+          </div>
+          <div class="lang-block" data-lang="zh">
+            <strong>樣本產生方式</strong>
+            <p>
+              以固定種子打亂全部五百行，再取前五十筆，因此每次顯示相同樣本。
+              種子為 <code>2026</code>。狀態只儲存在目前瀏覽器。
+            </p>
+            <p>
+              請對照原始 OpenSubtitles 下載檢查文字及對齊。翻譯風格不同不一定代表對齊錯誤。
+            </p>
+            <a href="about.html#data-notes">查看來源說明</a>
+          </div>
+        </aside>
+
+        <section class="prose" aria-labelledby="review-heading">
+          <div class="lang-block" data-lang="en">
+            <h2>Your review progress</h2>
+            <div class="callout warning">
+              <p>
+                This page helps you perform the required human check; it does not replace
+                it. The public dataset remains <code>human_checked: "no"</code> until a
+                verified export is incorporated into the data file.
+              </p>
+            </div>
+          </div>
+          <div class="lang-block" data-lang="zh">
+            <h2>你的核對進度</h2>
+            <div class="callout warning">
+              <p>
+                本頁協助你完成必須的人工核對，但不能代替你的判斷。在核實結果寫入資料檔前，
+                公開資料仍保持 <code>human_checked: "no"</code>。
+              </p>
+            </div>
+          </div>
+
+          <div class="review-overview" aria-live="polite">
+            <div class="review-stat">
+              <strong id="review-checked">0</strong>
+              <span data-i18n="review.checked">checked / 50</span>
+            </div>
+            <div class="review-stat">
+              <strong id="review-errors">0</strong>
+              <span data-i18n="review.errors">need correction</span>
+            </div>
+            <div class="review-stat">
+              <strong id="review-remaining">50</strong>
+              <span data-i18n="review.remaining">remaining</span>
+            </div>
+          </div>
+          <div class="review-progress" aria-hidden="true">
+            <span id="review-progress-bar"></span>
+          </div>
+          <div class="review-actions-top">
+            <button class="button primary" id="export-review" type="button" data-i18n="review.export">Export review results</button>
+            <button class="button quiet" id="reset-review" type="button" data-i18n="review.reset">Reset local review</button>
+          </div>
+
+          <div class="callout">
+            <div class="lang-block" data-lang="en">
+              <p>
+                <strong>Content warning:</strong> this corpus contains subtitle dialogue,
+                including occasional profanity and mature themes.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p>
+                <strong>內容提示：</strong> 本語料來自字幕對話，可能包含偶爾出現的粗俗語言及成人主題。
+              </p>
+            </div>
+          </div>
+
+          <div class="review-list" id="review-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>NV Atlas</strong> · <span data-i18n="footer.project">Translation Technology final project</span></p>
+      <p data-i18n="footer.note">A static, open corpus explorer with no tracking.</p>
+    </footer>
+    <script src="assets/app.js?v=3" defer></script>
+  </body>
+</html>

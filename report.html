@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en" data-page="report">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learning report for the NV Atlas nominal-to-verb subtitle corpus project.">
+    <title>Learning Report | NV Atlas</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/styles.css?v=3">
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NV Atlas home">
+        <span class="brand-mark" aria-hidden="true"><span>N</span><span>V</span></span>
+        <span class="brand-copy">
+          <strong>NV Atlas</strong>
+          <small data-i18n="brand.subtitle">Corpus explorer</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="nav.explore">Explore</a>
+        <a class="active" href="report.html" data-i18n="nav.report">Learning report</a>
+        <a href="codebook.html" data-i18n="nav.codebook">Codebook</a>
+        <a href="review.html" data-i18n="nav.review">Quality check</a>
+        <a href="about.html" data-i18n="nav.ai">AI use</a>
+      </nav>
+      <button class="language-switch" id="language-switch" type="button" aria-label="Switch language">
+        <span data-lang-label="en">EN</span>
+        <span class="switch-divider" aria-hidden="true">/</span>
+        <span data-lang-label="zh">繁</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="content-hero">
+        <div class="lang-block" data-lang="en">
+          <p class="eyebrow">Learning report</p>
+          <h1>Nouns under pressure, verbs at work.</h1>
+          <p class="hero-lede">
+            A small bilingual corpus study of how English nominal meanings are
+            reorganised as Chinese verbs in subtitles.
+          </p>
+        </div>
+        <div class="lang-block" data-lang="zh">
+          <p class="eyebrow">學習報告</p>
+          <h1>名詞承受壓力，動詞開始工作。</h1>
+          <p class="hero-lede">
+            一項小型英中雙語語料研究，觀察字幕翻譯如何把英文名詞的意義重新組織為中文動詞。
+          </p>
+        </div>
+      </section>
+
+      <div class="content-layout">
+        <aside class="report-toc">
+          <div class="lang-block" data-lang="en">
+            <strong>Contents</strong>
+            <nav aria-label="Report contents">
+              <a href="#origin">1. Origin</a>
+              <a href="#background">2. Background</a>
+              <a href="#gap">3. Gap</a>
+              <a href="#questions">4. Questions</a>
+              <a href="#method">5. Method</a>
+              <a href="#analysis">6. Analysis</a>
+              <a href="#conclusion">7. Conclusion</a>
+              <a href="#reflection">8. Reflection</a>
+            </nav>
+          </div>
+          <div class="lang-block" data-lang="zh">
+            <strong>目錄</strong>
+            <nav aria-label="報告目錄">
+              <a href="#origin">1. 緣起</a>
+              <a href="#background">2. 背景</a>
+              <a href="#gap">3. 研究缺口</a>
+              <a href="#questions">4. 問題</a>
+              <a href="#method">5. 方法</a>
+              <a href="#analysis">6. 分析</a>
+              <a href="#conclusion">7. 結論</a>
+              <a href="#reflection">8. 反思</a>
+            </nav>
+          </div>
+        </aside>
+
+        <article class="prose">
+          <section id="origin">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">01 · Origin</p>
+              <h2>Why this topic?</h2>
+              <p>
+                I began with a simple contrast that is easy to miss in a subtitle:
+                English often packages an action or a feeling as a noun, while the
+                Chinese line turns that meaning into a verb. The supplied data already
+                marked an English nominal and a Chinese verb for each sentence pair,
+                so the topic emerged from a visible pattern rather than from a list of
+                invented examples.
+              </p>
+              <p>
+                I chose the title <em>Nominal / Verb</em> because the slash captures the
+                project's central movement. The first side names what English foregrounds;
+                the second side names what the Chinese translation often asks the reader
+                to process as an action or state.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">01 · 緣起</p>
+              <h2>為何選擇這個題目？</h2>
+              <p>
+                我從字幕中一個容易忽略的對照出發：英文常把動作或感受包裝成名詞，
+                中文卻可能把同一意義展開為動詞。使用者提供的資料已為每個句對標出
+                英文名詞與中文動詞，因此題目源自可見的語言模式，而非憑空設計的例子。
+              </p>
+              <p>
+                專題名稱 <em>Nominal / Verb</em> 以斜線象徵核心移動：英文把什麼放在前景，
+                中文又如何要求讀者把它理解成動作或狀態。
+              </p>
+            </div>
+          </section>
+
+          <section id="background">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">02 · Background</p>
+              <h2>Grammatical metaphor in a constrained medium</h2>
+              <p>
+                Halliday and Martin describe grammatical metaphor as a change in how a
+                meaning is packaged, not merely a change from one word to another. A
+                nominal such as <em>discussion</em> can compress an event into a thing;
+                a Chinese verb such as <em>討論</em> restores an action frame. Vinay and
+                Darbelnet's idea of transposition offers a complementary way to describe
+                a shift in word class.
+              </p>
+              <p>
+                Subtitles add pressure. Lines must remain readable quickly, pronouns are
+                often omitted, and speakers use incomplete clauses. These conditions make
+                verbalisation a useful case for asking how meaning survives when its
+                grammatical shape changes.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">02 · 背景</p>
+              <h2>受限媒介中的語法隱喻</h2>
+              <p>
+                Halliday 與 Martin 所說的語法隱喻，改變的是意義的包裝方式，而不只是替換詞語。
+                <em>discussion</em> 這類名詞把事件壓縮成事物；<em>討論</em> 這類中文動詞則恢復動作框架。
+                Vinay 與 Darbelnet 的「詞性轉換」概念，則提供了描述詞類變化的另一角度。
+              </p>
+              <p>
+                字幕還增加了時間與空間壓力。句子必須能快速閱讀，主語常省略，
+                口語也常含不完整子句。在這些條件下，名詞動詞化正好讓我們追問：
+                當語法外形改變時，意義如何保留？
+              </p>
+            </div>
+          </section>
+
+          <section id="gap">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">03 · Gap</p>
+              <h2>The missing comparison</h2>
+              <p>
+                A corpus list can show hundreds of sentence pairs, but a reader still has
+                to compare them manually. Existing search tools usually stop at keyword
+                lookup. This project links semantic categories, Chinese verb position,
+                bilingual collocations and the underlying table, so a selected term can
+                be followed across different views.
+              </p>
+              <p>
+                The gap is not that this tiny sample can represent all subtitles. It is
+                that the relationship between the English nominal and the Chinese verbal
+                realisation is hard to see in a flat CSV.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">03 · 研究缺口</p>
+              <h2>缺少的比較層次</h2>
+              <p>
+                語料清單能展示數百個句對，讀者卻仍要逐筆比較。既有搜尋工具通常只做到關鍵詞查詢。
+                本專案把語意類別、中文動詞位置、雙語搭配與原始資料表連動，
+                讓使用者能沿著同一個詞跨越不同檢視。
+              </p>
+              <p>
+                研究缺口並非主張這個小樣本能代表所有字幕；真正的問題是，
+                英文名詞與中文動詞實現之間的關係，很難在一張平面的 CSV 表中看清楚。
+              </p>
+            </div>
+          </section>
+
+          <section id="questions">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">04 · Questions</p>
+              <h2>Three linked questions</h2>
+              <ol>
+                <li>Which semantic fields dominate the supplied set of nominal-to-verb pairs?</li>
+                <li>Do those categories differ in whether the Chinese verb begins a line, follows a modal or negative marker, or sits inside a larger predicate?</li>
+                <li>Which English terms form strong, repeated links with particular Chinese verbs, and what changes when the filters are applied?</li>
+              </ol>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">04 · 問題</p>
+              <h2>三個互相連動的問題</h2>
+              <ol>
+                <li>在提供的名詞轉動詞資料中，哪些語意領域佔最多？</li>
+                <li>不同語意類別，是否在「動詞起首」、「情態或否定語境」與「嵌入謂語」的分佈上有差異？</li>
+                <li>哪些英文詞與特定中文動詞形成反覆連線？套用篩選後，圖形如何改變？</li>
+              </ol>
+            </div>
+          </section>
+
+          <section id="method">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">05 · Method</p>
+              <h2>From five columns to a linked corpus</h2>
+              <div class="method-grid">
+                <div class="method-card">
+                  <strong>Source</strong>
+                  <p>500 supplied rows; 500 unique sentence IDs; 195 English key terms; 282 Chinese target verbs.</p>
+                </div>
+                <div class="method-card">
+                  <strong>Alignment</strong>
+                  <p>The source and target sentence text, English nominal and Chinese verb are preserved from the supplied CSV.</p>
+                </div>
+                <div class="method-card">
+                  <strong>Coding</strong>
+                  <p>Each nominal receives one of four semantic categories using the published codebook and a term-to-category map.</p>
+                </div>
+                <div class="method-card">
+                  <strong>Positions</strong>
+                  <p>The target text is searched for the Chinese verb. The marker preceding it determines verb-first, modulated or embedded.</p>
+                </div>
+              </div>
+              <p>
+                The transformation is reproducible: run
+                <code>python3 scripts/build_corpus.py</code>. Eight repeated sentence
+                pairs remain because they occur at different source IDs; they are
+                documented rather than silently removed.
+              </p>
+              <div class="callout warning">
+                <p>
+                  <strong>Provenance limitation.</strong> The supplied file identifies
+                  sentence IDs but not a download date or sampling seed. The site labels
+                  the corpus as OpenSubtitles 2024 en-zh_CN because that matches the
+                  course example and sentence-ID format, but this needs confirmation
+                  against the original download.
+                </p>
+              </div>
+              <div class="callout warning">
+                <p>
+                  <strong>Human check still required.</strong> At implementation time,
+                  all published rows are marked <code>human_checked: "no"</code>.
+                  I did not mark 50 rows as checked without the student personally
+                  verifying them. The quality-check page prepares a reproducible seeded
+                  sample of 50 entries for that task.
+                </p>
+              </div>
+              <p>
+                Codebook log: version 1 separated speech and thought from action nouns,
+                but pilot coding showed that terms such as <em>question</em> and
+                <em>permission</em> needed separate domains. Version 2 uses the four
+                published categories. The boundary case <em>consideration</em> is coded
+                as law and control because its usage in the supplied lines concerns
+                legal or transactional judgement; it is not treated merely as thinking.
+                Terms that combine two fields are assigned by the core meaning of the
+                nominal in context, not by the Chinese verb alone.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">05 · 方法</p>
+              <h2>從五個欄位到連動語料</h2>
+              <div class="method-grid">
+                <div class="method-card">
+                  <strong>來源</strong>
+                  <p>提供五百行；五百個不同句編號；195 個英文關鍵詞；282 個中文目標動詞。</p>
+                </div>
+                <div class="method-card">
+                  <strong>對齊</strong>
+                  <p>原文、譯文、英文名詞與中文動詞均保留自使用者提供的 CSV。</p>
+                </div>
+                <div class="method-card">
+                  <strong>編碼</strong>
+                  <p>依公開編碼簿及詞項對類別對照，為每個英文名詞指定四個語意類別之一。</p>
+                </div>
+                <div class="method-card">
+                  <strong>位置</strong>
+                  <p>在中文譯文中定位動詞，再依前面的標記判斷「動詞起首」、「情態／否定」或「嵌入謂語」。</p>
+                </div>
+              </div>
+              <p>
+                整個轉換可重現：執行 <code>python3 scripts/build_corpus.py</code>。
+                有八組重複句對因來自不同原始句編號而保留，並在網站中明確記錄，沒有靜默刪除。
+              </p>
+              <div class="callout warning">
+                <p>
+                  <strong>來源限制。</strong> 提供的檔案只有句編號，沒有下載日期與抽樣種子。
+                  網站依課堂範例及句編號格式標示為 OpenSubtitles 2024 en-zh_CN，
+                  但仍須由學生對照原始下載確認。
+                </p>
+              </div>
+              <div class="callout warning">
+                <p>
+                  <strong>仍須人工核對。</strong> 實作完成時，所有公開資料都標為
+                  <code>human_checked: "no"</code>。在學生本人未核對前，我不能假稱已有五十筆通過。
+                  品質檢查頁已以固定種子準備五十筆樣本，供完成這項工作。
+                </p>
+              </div>
+              <p>
+                編碼簿紀錄：第一版把言語與思考、行動名詞分開，但二十多筆試編顯示
+                <em>question</em> 與 <em>permission</em> 需要不同領域。第二版採用目前四個類別。
+                <em>consideration</em> 位於邊界，依提供語境中的法律或交易判斷歸入「法律與控制」，
+                不單純視為思考。跨領域詞依名詞在句中的核心意義分類，而不只看中文動詞。
+              </p>
+            </div>
+          </section>
+
+          <section id="analysis">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">06 · Analysis</p>
+              <h2>What the linked views show</h2>
+              <div class="report-chart">
+                <h3>Figure 1. Category distribution</h3>
+                <div class="report-category-bars"></div>
+              </div>
+              <p>
+                The largest category is <strong>Action and change</strong> (201 entries),
+                followed by <strong>Law and control</strong> (114) and
+                <strong>Emotion and state</strong> (104). Communication is the smallest
+                group (81). This does not mean that English subtitles use more action
+                nouns in general; it describes only the supplied 500-row selection.
+              </p>
+              <div class="report-chart">
+                <h3>Figure 2. Chinese verb-position distribution</h3>
+                <div class="report-realization-bars"></div>
+              </div>
+              <p>
+                Most target verbs are embedded in a larger predicate (281), while 169
+                appear near modality or negation and 50 are the first meaningful element
+                in the line. The <strong>Meaning × verb position</strong> treemap lets the
+                reader test whether this overall profile is repeated within each semantic
+                category.
+              </p>
+              <p>
+                In the <strong>Bilingual network map</strong>, <em>attention</em> is the
+                clearest hub in the full unfiltered view, largely through its repeated
+                link to <em>注意</em>. The network controls make that observation
+                checkable rather than purely visual: changing the top-term and
+                minimum-weight thresholds reveals how many links depend on high-frequency
+                repetitions.
+              </p>
+              <p>
+                The <strong>Frequent-term heatmap</strong> performs the numeric check that
+                the dramatic network view cannot do alone. Each cell is a count from the
+                same filtered table. Selecting a cell narrows both the English term and
+                semantic category, while the network and treemap redraw from the resulting
+                rows.
+              </p>
+              <div class="callout">
+                <p>
+                  <strong>Interpretation.</strong> Verbalisation makes the subtitle line
+                  more predicate-centred, but the data cannot by itself prove why a
+                  translator chose it. A likely explanation is compression and
+                  readability in dialogue, not a universal rule of English-to-Chinese
+                  translation.
+                </p>
+              </div>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">06 · 分析</p>
+              <h2>連動圖表揭示了什麼</h2>
+              <div class="report-chart">
+                <h3>圖一：語意類別分佈</h3>
+                <div class="report-category-bars"></div>
+              </div>
+              <p>
+                最大類別是<strong>行動與變化</strong>（201 筆），其次是
+                <strong>法律與控制</strong>（114 筆）與<strong>情緒與狀態</strong>（104 筆）。
+                <strong>言語與思考</strong>最少（81 筆）。這不代表所有英文字幕都偏重行動名詞；
+                它只描述提供資料中的五百筆選樣。
+              </p>
+              <div class="report-chart">
+                <h3>圖二：中文動詞位置分佈</h3>
+                <div class="report-realization-bars"></div>
+              </div>
+              <p>
+                多數目標動詞嵌在較大的謂語中（281 筆），169 筆鄰近情態或否定標記，
+                50 筆是句中有意義的第一個成分。<strong>意義 × 動詞位置</strong>樹狀圖可檢查
+                每個語意類別是否重複整體趨勢。
+              </p>
+              <p>
+                在<strong>雙語詞語網絡</strong>中，未篩選的完整檢視以
+                <em>attention</em> 為明顯中心，主要透過與 <em>注意</em> 的反覆連線。
+                網絡控制項讓觀察能被檢驗：調整顯示詞數與最小連結權重，就能看出結果在多大程度上依賴高頻重複。
+              </p>
+              <p>
+                <strong>高頻詞熱圖</strong>提供網絡無法單獨完成的數值核對。每一格都直接來自
+                相同篩選下的資料表；點擊一格會同時收窄英文詞與語意類別，
+                網絡與樹狀圖也依新的資料列重畫。
+              </p>
+              <div class="callout">
+                <p>
+                  <strong>解釋。</strong> 動詞化使字幕句子更以謂語為中心，但資料本身不能證明譯者為何選擇這種形式。
+                  較合理的解釋是對話的壓縮與可讀性，而不是一條普遍適用的英中翻譯規則。
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="conclusion">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">07 · Conclusion</p>
+              <h2>A small but inspectable corpus explorer</h2>
+              <p>
+                The project turns a flat 500-row CSV into a connected analytical
+                environment. The search and filters expose subsets; the network shows
+                repeated bilingual links; the treemap compares category and verb
+                position; the heatmap offers term-level counts; and the table preserves
+                the original evidence. All views share state and update together.
+              </p>
+              <p>
+                The main finding is structural: the selected pairs overwhelmingly
+                describe action and change, and most Chinese verbs are embedded rather
+                than line-initial. The more important contribution is the transparent
+                pipeline from source pair to category, position, chart and citation.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">07 · 結論</p>
+              <h2>一個小型但可檢驗的語料探索器</h2>
+              <p>
+                本專題把平面化的五百行 CSV 轉為互相連結的分析環境。搜尋與篩選揭露資料子集；
+                網絡顯示反覆的雙語連結；樹狀圖比較語意與動詞位置；熱圖提供詞項層級計數；
+                資料表則保留原始證據。所有檢視共用狀態並同步更新。
+              </p>
+              <p>
+                主要結構發現是：選樣中的句對大量描述行動與變化，多數中文動詞嵌在謂語中，
+                而非出現在行首。更重要的成果，是從原文句對、類別、位置、圖表到來源之間，
+                建立可檢查且可重現的流程。
+              </p>
+            </div>
+          </section>
+
+          <section id="reflection">
+            <div class="lang-block" data-lang="en">
+              <p class="eyebrow">08 · Reflection</p>
+              <h2>What I learned</h2>
+              <p>
+                The hardest part was not drawing a chart. It was deciding what a chart
+                was allowed to claim. A network edge looks authoritative, yet it may
+                represent one sentence pair or a repeated subtitle line. I therefore
+                added minimum-link controls and made the table the final source of truth.
+              </p>
+              <p>
+                I would improve the project by confirming the original corpus download,
+                recording the true sampling seed, and completing the human check before
+                publication. I would also code a stratified sample separately and compare
+                the two category decisions.
+              </p>
+              <p>
+                AI was useful for inspecting the brief, writing the data transformation,
+                building the interface and drafting bilingual prose. It could not verify
+                the student's personal judgement, confirm provenance from a missing
+                metadata field, or make subjective coding decisions authoritative.
+              </p>
+            </div>
+            <div class="lang-block" data-lang="zh">
+              <p class="eyebrow">08 · 反思</p>
+              <h2>我學到什麼</h2>
+              <p>
+                最難的不是畫出圖表，而是決定圖表可以宣稱什麼。網絡連線看起來很有權威，
+                卻可能只代表一個句對或一組重複字幕。因此我加入最小權重控制，
+                並讓資料表成為最終核對依據。
+              </p>
+              <p>
+                若能重做，我會先確認原始語料下載、記錄真正抽樣種子，並在公開前完成人工核對。
+                我也會另外分層抽樣重新編碼，再比較兩次類別判定。
+              </p>
+              <p>
+                AI 能協助閱讀作業要求、撰寫資料轉換、建立介面與草擬雙語文字；
+                但它不能代替學生本人的判斷、無法從缺少的欄位確認來源，
+                也不應把主觀編碼自動視為最終答案。
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>NV Atlas</strong> · <span data-i18n="footer.project">Translation Technology final project</span></p>
+      <p data-i18n="footer.note">A static, open corpus explorer with no tracking.</p>
+    </footer>
+    <script src="assets/app.js?v=3" defer></script>
+  </body>
+</html>

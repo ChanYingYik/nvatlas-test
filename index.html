@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" data-page="explore">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An interactive English-Chinese corpus explorer for nominal-to-verb translation patterns in subtitles.">
+    <title>Nominal / Verb | NV Atlas Corpus Explorer</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/styles.css?v=3">
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NV Atlas home">
+        <span class="brand-mark" aria-hidden="true">
+          <span>N</span><span>V</span>
+        </span>
+        <span class="brand-copy">
+          <strong>NV Atlas</strong>
+          <small data-i18n="brand.subtitle">Corpus explorer</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="active" href="index.html" data-i18n="nav.explore">Explore</a>
+        <a href="report.html" data-i18n="nav.report">Learning report</a>
+        <a href="codebook.html" data-i18n="nav.codebook">Codebook</a>
+        <a href="review.html" data-i18n="nav.review">Quality check</a>
+        <a href="about.html" data-i18n="nav.ai">AI use</a>
+      </nav>
+      <button class="language-switch" id="language-switch" type="button" aria-label="Switch language">
+        <span data-lang-label="en">EN</span>
+        <span class="switch-divider" aria-hidden="true">/</span>
+        <span data-lang-label="zh">繁</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="home.eyebrow">A 500-pair English-Chinese subtitle corpus</p>
+          <h1 data-i18n="home.title">When nouns become verbs.</h1>
+          <p class="hero-lede" data-i18n="home.lede">
+            Explore how English event and state nominals are unpacked as Chinese verbs, and
+            use linked views to compare meaning, syntax and translation choice.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#explorer" data-i18n="home.start">Explore the corpus</a>
+            <a class="button secondary" href="report.html" data-i18n="home.read">Read the research</a>
+          </div>
+        </div>
+        <aside class="hero-note" aria-labelledby="research-question-title">
+          <p class="note-kicker" data-i18n="home.questionLabel">Research question</p>
+          <h2 id="research-question-title" data-i18n="home.question">
+            Which kinds of English nominal meaning become Chinese verbs, and where does the
+            verb appear?
+          </h2>
+          <p data-i18n="home.theory">
+            The analysis uses grammatical metaphor and transposition to treat verbalisation
+            as a meaningful shift in information packaging.
+          </p>
+          <div class="hero-stats" aria-live="polite">
+            <div><strong id="stat-entries">500</strong><span data-i18n="stat.entries">sentence pairs</span></div>
+            <div><strong id="stat-terms">0</strong><span data-i18n="stat.terms">English key terms</span></div>
+            <div><strong id="stat-checked">0</strong><span data-i18n="stat.checked">human checked</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="provenance-strip" aria-labelledby="provenance-title">
+        <div>
+          <span class="status-dot" aria-hidden="true"></span>
+          <strong id="provenance-title" data-i18n="home.sourceLabel">Corpus label</strong>
+          <span data-i18n="home.source">OpenSubtitles 2024 en-zh_CN, supplied as a 500-row CSV.</span>
+        </div>
+        <a href="about.html#data-notes" data-i18n="home.sourceDetails">Read provenance and limitations</a>
+      </section>
+
+      <aside class="content-warning" aria-label="Content warning">
+        <strong data-i18n="warning.label">Content note</strong>
+        <span data-i18n="warning.body">Subtitle dialogue may include profanity and mature themes.</span>
+      </aside>
+
+      <section class="quality-banner" id="quality-banner" hidden>
+        <div>
+          <strong data-i18n="quality.title">Verification needed</strong>
+          <p data-i18n="quality.body">
+            No entries are marked as human checked in the published dataset. Use the quality
+            check page to review a random sample before submission.
+          </p>
+        </div>
+        <a class="button compact" href="review.html" data-i18n="quality.action">Start 50-entry review</a>
+      </section>
+
+      <section class="explorer" id="explorer">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="explore.eyebrow">Interactive corpus</p>
+            <h2 data-i18n="explore.title">Follow a pattern across every view.</h2>
+          </div>
+          <p data-i18n="explore.intro">
+            Search, filter and click any term. The charts and table update together, and the
+            current view is kept in the URL.
+          </p>
+        </div>
+
+        <div class="control-panel" aria-label="Corpus filters">
+          <label class="search-field">
+            <span data-i18n="filter.search">Search source, translation or key term</span>
+            <span class="search-input-wrap">
+              <input id="search-input" type="search" autocomplete="off" placeholder="e.g. attention, 注意, permission" data-i18n-placeholder="filter.searchPlaceholder">
+              <button id="clear-search" class="icon-button" type="button" aria-label="Clear search">×</button>
+            </span>
+          </label>
+          <label>
+            <span data-i18n="filter.category">Meaning category</span>
+            <select id="category-filter">
+              <option value="all" data-i18n="filter.allCategories">All categories</option>
+              <option value="communication" data-i18n="category.communication">Speech & thought</option>
+              <option value="control" data-i18n="category.control">Law & control</option>
+              <option value="affect" data-i18n="category.affect">Emotion & state</option>
+              <option value="process" data-i18n="category.process">Action & change</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="filter.checked">Human checked</span>
+            <select id="checked-filter">
+              <option value="all" data-i18n="filter.allStatuses">All statuses</option>
+              <option value="yes" data-i18n="filter.yes">Yes</option>
+              <option value="no" data-i18n="filter.no">No</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="filter.realization">Chinese verb position</span>
+            <select id="realization-filter">
+              <option value="all" data-i18n="filter.allPositions">All positions</option>
+              <option value="verb-first" data-i18n="realization.verb-first">Verb-first</option>
+              <option value="modulated" data-i18n="realization.modulated">Modal / negative context</option>
+              <option value="embedded" data-i18n="realization.embedded">Embedded in predicate</option>
+            </select>
+          </label>
+          <div class="control-actions">
+            <button class="button quiet" id="reset-filters" type="button" data-i18n="filter.reset">Reset</button>
+            <button class="button quiet" id="copy-view" type="button" data-i18n="filter.copy">Copy view link</button>
+          </div>
+        </div>
+
+        <div class="result-status" aria-live="polite">
+          <p><strong id="result-count">0</strong> <span data-i18n="results.matching">matching sentence pairs</span></p>
+          <button id="active-term" class="term-chip" type="button" hidden></button>
+        </div>
+
+        <div class="visual-grid">
+          <article class="chart-card network-card">
+            <div class="chart-heading">
+              <div>
+                <p class="chart-index">01</p>
+                <h3 data-i18n="network.title">Bilingual network map</h3>
+              </div>
+              <span class="chart-type" data-i18n="chart.relational">Relational</span>
+            </div>
+            <p class="chart-caption" data-i18n="network.caption">
+              Which English nominals repeatedly resolve to the same Chinese verbs?
+            </p>
+            <div class="network-controls">
+              <label>
+                <span data-i18n="network.top">Top English terms</span>
+                <input id="network-top" type="range" min="6" max="20" value="12">
+                <output id="network-top-output">12</output>
+              </label>
+              <label>
+                <span data-i18n="network.weight">Minimum link weight</span>
+                <input id="network-weight" type="range" min="1" max="8" value="1">
+                <output id="network-weight-output">1</output>
+              </label>
+              <div class="zoom-tools" role="group" aria-label="Network zoom">
+                <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+                <button type="button" id="zoom-reset" aria-label="Reset zoom" data-i18n="network.resetZoom">Reset</button>
+                <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+              </div>
+            </div>
+            <div class="network-stage" id="network-stage">
+              <svg id="network-svg" viewBox="0 0 1000 520" role="img" aria-labelledby="network-title-desc">
+                <title id="network-title-desc">Interactive network of English nominal terms and Chinese translation verbs</title>
+              </svg>
+            </div>
+            <p class="chart-help" data-i18n="network.help">
+              Drag the background to pan, scroll to zoom, drag nodes to arrange them, and
+              double-click a node to pin it. Select a label to search it.
+            </p>
+          </article>
+
+          <article class="chart-card treemap-card">
+            <div class="chart-heading">
+              <div>
+                <p class="chart-index">02</p>
+                <h3 data-i18n="treemap.title">Meaning × verb position</h3>
+              </div>
+              <span class="chart-type" data-i18n="chart.hierarchical">Hierarchical</span>
+            </div>
+            <p class="chart-caption" data-i18n="treemap.caption">
+              How does each meaning category divide across Chinese verb positions?
+            </p>
+            <div class="treemap-stage" id="treemap-stage" aria-live="polite"></div>
+            <p class="chart-help" data-i18n="treemap.help">
+              Select a rectangle to apply its category and verb-position filters.
+            </p>
+          </article>
+
+          <article class="chart-card heatmap-card">
+            <div class="chart-heading">
+              <div>
+                <p class="chart-index">03</p>
+                <h3 data-i18n="heatmap.title">Frequent-term heatmap</h3>
+              </div>
+              <span class="chart-type" data-i18n="chart.distributional">Distributional</span>
+            </div>
+            <p class="chart-caption" data-i18n="heatmap.caption">
+              Where do the most frequent English nominals cluster across meaning categories?
+            </p>
+            <div class="heatmap-scroll" id="heatmap-stage" aria-live="polite"></div>
+            <p class="chart-help" data-i18n="heatmap.help">
+              Select a cell to combine its category and key-term search.
+            </p>
+          </article>
+        </div>
+
+        <article class="data-card" id="data-grid">
+          <div class="data-heading">
+            <div>
+              <p class="chart-index">04</p>
+              <h3 data-i18n="table.title">Corpus data</h3>
+              <p data-i18n="table.caption">
+                Sort the current result set, inspect every field, or export it as CSV.
+              </p>
+            </div>
+            <button class="button secondary" id="export-csv" type="button" data-i18n="table.export">Export filtered CSV</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th><button data-sort="id">ID <span aria-hidden="true">↕</span></button></th>
+                  <th><button data-sort="source_text" data-i18n="table.source">English source</button></th>
+                  <th><button data-sort="target_text" data-i18n="table.target">Chinese translation</button></th>
+                  <th><button data-sort="key_term" data-i18n="table.term">Key term</button></th>
+                  <th><button data-sort="category" data-i18n="table.category">Category</button></th>
+                  <th><button data-sort="realization" data-i18n="table.position">Verb position</button></th>
+                  <th><button data-sort="human_checked" data-i18n="table.checked">Checked</button></th>
+                </tr>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+          <div class="table-navigation">
+            <p id="page-status"></p>
+            <div>
+              <button class="button quiet" id="previous-page" type="button" data-i18n="table.previous">Previous</button>
+              <button class="button quiet" id="next-page" type="button" data-i18n="table.next">Next</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>NV Atlas</strong> · <span data-i18n="footer.project">Translation Technology final project</span></p>
+      <p data-i18n="footer.note">A static, open corpus explorer with no tracking.</p>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="assets/app.js?v=3" defer></script>
+  </body>
+</html>
